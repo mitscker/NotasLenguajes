@@ -1,0 +1,9 @@
+>Que es un componente
+Es un bloque de construcción
+
+>Como identificar un componente
+    ¿Que elementos se repiten?
+    Estos son los elementos en una lista o los que comparten un aspecto visual y su funcionalidad
+    ¿Que elementos una funcion muy especifica?
+    Estos sirven para encapsular la logica y permiten juntar muchos comportamientos y aspectos visuales en un solo lugar
+
