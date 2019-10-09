@@ -1,0 +1,85 @@
+Comandos GIT:
+
+>git clone <url>
+Extrae un repositorio especifico de git
+
+>git add <archivo/locación/todo>
+Agregar y prepara los archivos para la creación de una versión
+
+>git commit -m "<comentario>"
+Sube la versión y agrega un comentario como buena practica
+
+>git status
+Verifica el status de la rama en la que se trabajando
+
+>git show <archivo>
+Te permite ver los cambios o eliminaciones de las lineas en el archivo
+
+>git log <archivo/locación/todo>
+Te hace un listado de las versiones del directorio/archivo/todo
+
+>git log --stat <archivo/locación/todo>
+Te hace un listado de las versiones del directorio/archivo/todo y ademas te hace un listado de archivos en los que te cuenta los cambios que han ocurrido en ellos
+
+>git reset <id del commit>
+Regresa todos los archivos a una version anterior
+
+>git checkout <id del commit> <nombre de archivo>
+Te permite estar en una version anterior del archivo sin tener que eliminar los commits posteriores
+
+>git checkout master <nombre del archivo>
+Te permite volver a la ultima version del archivo
+
+>git reset HEAD
+Eliminar los archivos del status Staging antes de hacer el commit
+
+>git push(cuando hay un servidor en el cual esta el proyecto principal)
+Cuando subimos los commits al servidor donde esta el proyecto principal
+
+>git branch
+Te muestra un listado de las ramas en cual estas posicionado
+
+>git branch <nombre de rama>
+Con este comando se crea una nueva rama
+    >git checkout <nombre de rama>
+    Con el comando checkou podemos swichearnos entre las ramas y cambiar a estas
+
+>git merge <nombre de la rama>
+Agrega los cambios que han surgido en esta rama a la rama donde se ejecuta el comando
+
+>git remote add origin <url de repositorio>
+Agrega un repositorio remoto para subir nuesto proyecto, crea en nuestra locación un folder origin
+
+>git push origin <nombre de la rama>
+Este comando agregar al folder origin nuestro proyecto, el cual se reflejara en el repositorio creado en github
+
+>git pull origin master
+Trae el proyecto del repositorio a la rama master donde master es el nombre de la rama
+    >git pull origin master --allow-unrelated-histories
+    Permite bajar proyecto de manera forzada aunque no esten en tu equipo local
+
+>git config -l
+Te despliega la configuracion actual del git
+
+>ssh-keygen -t rsa -b 4096 "<correo>"
+Creacion de una llave local SSH
+
+>git log --all --graph --decorate --oneline
+Comando para ver todos los logs de una manera mas intuitiva
+
+>alias <nombre de alias>="<comando>" [ej]= alias arbolito="git log --all --graph --decorate --oneline"
+Crea un alias que es una manera facil y dinamica de ejecutar un comando
+
+>git tag -a <nombre del tag> -m "<comentario>" <id log especifico>
+Esto agrega un tag de una version especifica del proyecto
+
+>git tag
+comando para ver los tags existentes
+
+>git push origin --tags
+Con este comando subimos los tags locales a el repositorio
+
+>git push origin :refs/tags/<nombre del tag>
+Con este comando hacemos referencia a la sincronización de una eliminació para que se refleje en el servidor del repositorio
+
+
