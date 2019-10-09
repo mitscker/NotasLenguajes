@@ -61,7 +61,7 @@ Trae el proyecto del repositorio a la rama master donde master es el nombre de l
 >git config -l
 Te despliega la configuracion actual del git
 
->ssh-keygen -t rsa -b 4096 "<correo>"
+>ssh-keygen -t rsa -b 4096 -C "<correo>"
 Creacion de una llave local SSH
 
 >git log --all --graph --decorate --oneline
@@ -82,4 +82,5 @@ Con este comando subimos los tags locales a el repositorio
 >git push origin :refs/tags/<nombre del tag>
 Con este comando hacemos referencia a la sincronización de una eliminació para que se refleje en el servidor del repositorio
 
-
+>git clone https://username:password@github.com/username/repo_name.git
+Comando para clonar un repositorio privado
