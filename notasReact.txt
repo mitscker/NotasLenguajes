@@ -7,8 +7,8 @@ Es un bloque de construcción
     ¿Que elementos una funcion muy especifica?
     Estos sirven para encapsular la logica y permiten juntar muchos comportamientos y aspectos visuales en un solo lugar
 
->Estructura basica de un componente:
-    // Un componente requerira obligatoriamente de un 
+>Estructura basica de un componente
+    // Un componente requerira obligatoriamente de un metodo render() {}
     import React from 'react'
     import logoImg from '../images/logo.png';
 
@@ -36,3 +36,14 @@ Es un bloque de construcción
     }
 
     export default Bagde
+
+>Como aplicar estilos
+// con un import y entre comillas la ruta del archivo css
+import 'ruta-del-archivo-css'
+
+>Como agregamos bootstrap
+// comando para agregar bootstrap a nuestro proyecto
+npm install bootstrap
+// importamos de la siguiente manera
+// import y seguido la ruta del archivo de bootstrap que queremos importar
+import 'ruta-del-archivo-a-importar'
