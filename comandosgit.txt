@@ -36,6 +36,9 @@ Eliminar los archivos del status Staging antes de hacer el commit
 >git push(cuando hay un servidor en el cual esta el proyecto principal)
 Cuando subimos los commits al servidor donde esta el proyecto principal
 
+>git push --force <url-de-repositorio>
+Sube los cambios al repositorio de manera forzada
+
 >git branch
 Te muestra un listado de las ramas en cual estas posicionado
 
