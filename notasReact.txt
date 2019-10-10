@@ -7,3 +7,32 @@ Es un bloque de construcción
     ¿Que elementos una funcion muy especifica?
     Estos sirven para encapsular la logica y permiten juntar muchos comportamientos y aspectos visuales en un solo lugar
 
+>Estructura basica de un componente:
+    // Un componente requerira obligatoriamente de un 
+    import React from 'react'
+    import logoImg from '../images/logo.png';
+
+    class Bagde extends React.Component {
+        render() {
+            return <div>
+                        <div>
+                            <img src={logoImg} alt="logo de la conferencia" width="150" />
+                        </div>
+
+                        <div>
+                            <h1>Richard Kaufman</h1>
+                        </div>
+
+                        <div>
+                            <p>Front End Egineer</p>
+                            <p>@sparragus</p>
+                        </div>
+
+                        <div>
+                            <p>#miPrimerReact</p>
+                        </div>
+                    </div>
+        }
+    }
+
+    export default Bagde
