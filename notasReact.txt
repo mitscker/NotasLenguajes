@@ -47,3 +47,19 @@ npm install bootstrap
 // importamos de la siguiente manera
 // import y seguido la ruta del archivo de bootstrap que queremos importar
 import 'ruta-del-archivo-a-importar'
+
+>Ciclo de vida de un componente
+- Montaje: El codigo que representa react se representa en el DOM
+    llama 3 metodos
+    - Constructor
+    - Render
+    - ComponentDidMount
+
+- Actualización: Cuando los props del componente se actualizan/cambian
+    ejecuta 2 metodos
+    - Render
+    - ComponentDidUpdate: este metodo recibe 2 argumentos, el primero es los props que tenia anteriormente y el estado que tenia anteriormente
+
+- Desmontaje: Cuando se desmonta el componente
+    ejecuta un solo metodo
+    - ComponentWillUnmount
