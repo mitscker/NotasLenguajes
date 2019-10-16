@@ -63,3 +63,9 @@ import 'ruta-del-archivo-a-importar'
 - Desmontaje: Cuando se desmonta el componente
     ejecuta un solo metodo
     - ComponentWillUnmount
+
+>Introduccion a llamadas API
+consta de 3 estados:
+    - Loading
+    - Error
+    - Datos
