@@ -87,3 +87,28 @@ Con este comando hacemos referencia a la sincronización de una eliminació para
 
 >git clone https://username:password@github.com/username/repo_name.git
 Comando para clonar un repositorio privado
+
+>git diff <nombre-de-rama>
+Estando en la rama en la que queremos hacer la comparacion, el nombre de la rama que colocaremos en el comando es la otra que queremos comprar
+
+>>>Esto lo puede usar cuando has hecho un reset --hard y has perdido el proyecto:
+ejemplo del comando:
+>git reset --hard origin/master
+Este comando es usado para traer la ultima version del servidor de manera forzada, esto una ver lo aplique en un repositorio en blanco a un proyecto ya hecho elimino todo,
+lo que me salvo fue un unico commit que había hecho antes de este comando
+
+    1. Primero vamos vamos ejecutar el siguiente comando:
+
+    >git reflog
+    Este comando te trae los hashes de los commit, aunque se hayan eliminado puedes obtenerlos de esta manera
+    Lo siguiente es una vez que tienes el codigo del commit nos posicionamos en el con un git checkout
+    vamos a hacer los siguientes comandos:
+    git branch <nombre-de-la-rama> <id-del-commit>
+    git checkout master
+    git merge <nombre-de-la-rama>
+    En este caso creamos una branch temporal en la que estara nuestro proyecto recuperado,
+    nos vamos a la master y despues hacemos un merge a la master para recuperar el proyecto en caso de que arroje un error por la related histories
+    agregar esto al momento de hacer merge:
+    --allow-unrelated-histories
+    quedando de la siguiente:
+    git merge <nombre-de-la-rama> --allow-unrelated-histories
