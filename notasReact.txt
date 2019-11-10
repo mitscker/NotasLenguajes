@@ -40,6 +40,7 @@ Es un bloque de construcción
 >Como aplicar estilos
 // con un import y entre comillas la ruta del archivo css
 import 'ruta-del-archivo-css'
+el uso de estilos dentro de react es con el atributo de className="<nombre-de-la-clase>"
 
 >Como agregamos bootstrap
 // comando para agregar bootstrap a nuestro proyecto
