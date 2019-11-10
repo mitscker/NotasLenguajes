@@ -49,6 +49,9 @@ npm install bootstrap
 // import y seguido la ruta del archivo de bootstrap que queremos importar
 import 'ruta-del-archivo-a-importar'
 
+>props
+Los componentes tiene una propiedad propia llamada props(properties) y es propia de la clase
+
 >Ciclo de vida de un componente
 - Montaje: El codigo que representa react se representa en el DOM
     llama 3 metodos
