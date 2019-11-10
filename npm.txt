@@ -1,0 +1,2 @@
+>npm cache clean --force
+comando para limpiar el cache del NPM
