@@ -49,6 +49,39 @@ npm install bootstrap
 // import y seguido la ruta del archivo de bootstrap que queremos importar
 import 'ruta-del-archivo-a-importar'
 
+>Uso del estado:
+// de esta forma se captura el estado de un input (esto se realiza dento del metodo onchange)
+// uno de los problemas del siguiente codigo es que los demas inputs con este mismo metodo van a guardar el valor siempre en el atributo de estado firstName
+handleChange = e => {
+    this.setState({
+        firstName: e.target.value
+    });
+}
+<input onChange={this.handleChange} >
+// se soluciona el problema anterior de la siguiente manera, para guardar los valor en un propio atributo de estado & para esto el input tiene que tener un name definido:
+// Esto hace que se instancie un estado pero con el nombre de cada input creado asi un atributo de estado por input
+handleChange = e => {
+    this.setState({
+        [e.target.name]: e.target.value
+    });
+}
+<input onChange={this.handleChange} name="firstName" >
+<input onChange={this.handleChange} name="lastName" >
+<input onChange={this.handleChange} name="email" >
+// Queda un problema por resolver se estan generando dos estados y cuando la aplicacion crece esto puede crear un problema de rendimiento
+// Se soluciona instanciando el state desde el inicio esto para tener una solo fuente de informacion de donde el input este guardando y sacando la información
+state = {// aqui colocamos los atributos que necesitemos};
+handleChange = e => {
+    this.setState({
+        [e.target.name]: e.target.value
+    });
+}
+<input onChange={this.handleChange} name="firstName" >
+<input onChange={this.handleChange} name="lastName" >
+<input onChange={this.handleChange} name="email" >
+
+
+
 >props
 Los componentes tiene una propiedad propia llamada props(properties) y es propia de la clase
 
