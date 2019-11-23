@@ -80,6 +80,8 @@ handleChange = e => {
 <input onChange={this.handleChange} name="lastName" >
 <input onChange={this.handleChange} name="email" >
 
+>Que es un levantamiento de estado
+// Esto en resumen es poner el estado en una localizacion donde se le pueda pasar como props a los demas componentes
 
 
 >props
