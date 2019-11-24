@@ -87,6 +87,9 @@ handleChange = e => {
 >props
 Los componentes tiene una propiedad propia llamada props(properties) y es propia de la clase
 
+>state (recomendación)
+Uno de los mejores lugares para inicializar el state es en el constructor
+
 >Ciclo de vida de un componente
 - Montaje: El codigo que representa react se representa en el DOM
     llama 3 metodos
