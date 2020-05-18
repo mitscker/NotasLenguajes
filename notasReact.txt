@@ -1,3 +1,6 @@
+>Instalacion de create-react-app
+npm install -g create-react-app
+
 >Que es un componente
 Es un bloque de construcción
 
