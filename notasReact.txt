@@ -10,6 +10,12 @@ Es un bloque de construcción
     ¿Que elementos una funcion muy especifica?
     Estos sirven para encapsular la logica y permiten juntar muchos comportamientos y aspectos visuales en un solo lugar
 
+>import React from 'react';
+Esta dependencia siempre, obligatoriamente debe estar instanciada en nuestro codigo, si queremos hacer uso de codigo jsx
+ejemplo:
+let elemento = <h1>hello world</h1>;
+podemos asignar y hacer uso de etiquetas html directamente, gracias a la dependencia 'react'
+
 >Estructura basica de un componente
     // Un componente requerira obligatoriamente de un metodo render() {}
     import React from 'react'
