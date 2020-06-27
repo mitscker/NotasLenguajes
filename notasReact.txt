@@ -16,6 +16,15 @@ ejemplo:
 let elemento = <h1>hello world</h1>;
 podemos asignar y hacer uso de etiquetas html directamente, gracias a la dependencia 'react'
 
+>expresiones en codigo jsx
+Las expresiones son tal cual expresiones dentro de jsx estas van dentro de {} "llaves", pueden tambien ser variables o funciones.
+ej:
+let name = 'marlen';
+let name = () => 3 + 3;
+let element = <h1>Hola soy, {name}</h1>
+let element = <h1>Hola soy, {2 + 2}</h1>
+puede ser como se muestra un valor de una variable tal cual, una expresion o una funcion
+
 >Estructura basica de un componente
     // Un componente requerira obligatoriamente de un metodo render() {}
     import React from 'react'
