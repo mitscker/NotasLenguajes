@@ -66,6 +66,8 @@ npm install bootstrap
 // importamos de la siguiente manera
 // import y seguido la ruta del archivo de bootstrap que queremos importar
 import 'ruta-del-archivo-a-importar'
+ejemplo: import 'bootstrap/dist/css/bootstrap.css';
+esta linea es agregada al index.js global de la aplicacion
 
 >Uso del estado:
 // de esta forma se captura el estado de un input (esto se realiza dento del metodo onchange)
