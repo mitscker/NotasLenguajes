@@ -146,3 +146,22 @@ las clases son para quitar el estilo de enlace/pasamos el id
 <Link className="text-decoration-none text-reset" to={`/badges/${badge.id}/edit`}></Link>
 3. para poder obtener el id se hace con el siguiente codigo, el cual puedes usar en el componentDidMount cuando llamas al get de la informacion para su despliegue
 this.props.match.params.badgeId
+
+>UI components & Container components
+Buena practica de programación separar los componentes en dos:
+1. Container components: componente que se encarga de la logica del componente
+2. UI components: componentes que se encarguen de la presentacion de la información la vista
+ContainerComponente>UIComponent
+
+>ReactDOM.createPortal
+Usado preferentemente en modales, esto porque createPortal, renderiza en un lugar aparte de la aplicacion principal
+ejemplo:
+import ReactDOM from 'react-dom';
+// en el jsx
+{ReactDOM.createPortal(#que se va a renderizar#, #donde#)}
+- lo que se va a renderizar como estara fuera de la aplicacion principal que seria nuestra app, entonces tendria su propia etiqueta en el index.html
+ejemplo (dentro del archivo index.html) creamos una nueva tag con el id del elemento que vamos a renderizar:
+<div id="modal"></div>
+- quedaria de la siguiente manera en nuestro jsx:
+{ReactDOM.createPortal(<h1></h1>, document.getElementById('modal'))}
+
