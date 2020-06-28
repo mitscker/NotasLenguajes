@@ -131,3 +131,18 @@ consta de 3 estados:
     - Loading
     - Error
     - Datos (tiene dos variantes, datos vacio, y datos)
+
+>Redireccionar a una pagina no encontrada
+uso de Redirect, una vez importado, ejemplo:
+<Route path="/404" component={NotFound}></Route>
+<Redirect from="*" to="/404"></Redirect>
+
+>Pagina de edicion, uso de un id como parametro en la url de la ruta
+ejemplo:
+1. estructura en route de la ruta con un identificador
+<Route exact path="/badges/:badgeId/edit" component={badgeEdit}></Route>
+2. en los elementos que usaremos como enlaces para ir a la ruta, este es un ejemplo de la estructura, englobados en etiqueta Link para pasar a la ruta especificada
+las clases son para quitar el estilo de enlace/pasamos el id
+<Link className="text-decoration-none text-reset" to={`/badges/${badge.id}/edit`}></Link>
+3. para poder obtener el id se hace con el siguiente codigo, el cual puedes usar en el componentDidMount cuando llamas al get de la informacion para su despliegue
+this.props.match.params.badgeId
