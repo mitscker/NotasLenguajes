@@ -130,4 +130,4 @@ Uno de los mejores lugares para inicializar el state es en el constructor
 consta de 3 estados:
     - Loading
     - Error
-    - Datos
+    - Datos (tiene dos variantes, datos vacio, y datos)
