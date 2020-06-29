@@ -165,3 +165,6 @@ ejemplo (dentro del archivo index.html) creamos una nueva tag con el id del elem
 - quedaria de la siguiente manera en nuestro jsx:
 {ReactDOM.createPortal(<h1></h1>, document.getElementById('modal'))}
 
+>Modal-practicamente es un createPortal, existen dos tipos:
+-genericos, no tienen accion a realizar
+-especializados, cumplen una funcion especifica
