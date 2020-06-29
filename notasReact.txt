@@ -168,3 +168,23 @@ ejemplo (dentro del archivo index.html) creamos una nueva tag con el id del elem
 >Modal-practicamente es un createPortal, existen dos tipos:
 -genericos, no tienen accion a realizar
 -especializados, cumplen una funcion especifica
+
+>componentes / componentes funcionales
+los componentes se declaran de la siguiente manera:
+// componentes
+class NombreComponente extends React.Component() {
+    render() {
+        return (
+            <React.Fragment></React.Fragment>
+        )
+    }
+}
+export {NombreComponente as default}
+// componentes funcionales
+function NombreComponente() {
+    return (
+        <React.Fragment></React.Fragment>
+    )
+}
+export {NombreComponente as default}
+// una de las diferencias importante entre estos es que los funcionales no contienen logica, es practicamente la vista, y que estos dada su declaracion no manejan los estados de un componente normal
