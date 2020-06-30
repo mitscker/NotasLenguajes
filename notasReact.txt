@@ -188,3 +188,14 @@ function NombreComponente() {
 }
 export {NombreComponente as default}
 // una de las diferencias importante entre estos es que los funcionales no contienen logica, es practicamente la vista, y que estos dada su declaracion no manejan los estados de un componente normal
+
+>Hooks
+agrega la funcionalidad de manejar estados, a los componentes funcionales, como un componente normal
+hay Hooks ya predefinios por ejemplo:
+- useState
+- useEffect
+- useReducer
+Tambien existen los Custom Hooks que son Hooks creados, hay dos reglas para la declaracion de estos Hooks
+1. deben comenzar con "use"
+2. no puede ir dentro de una sentencia condicional
+*los Hooks solo funcionan dentro de componentes funcionales
