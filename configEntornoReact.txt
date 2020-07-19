@@ -1,0 +1,69 @@
+Intanciación de entorno basico para proyecto en React:
+
+>Creacion de los siguientes archivos
+__folders: public || src || src>components
+__archivos: public/index.html || src/index.js
+
+>Instalación de react
+npm install react react-dom
+    - configuracion de index.js.. importacion y uso del reactDOM.render();
+    - index.html estructura inicial
+
+>Instalación de babel para usar nuevos estandares de javascript
+npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save --only=dev
+
+>Creacion de archivo en raíz ".babelrc" para uso de la herramienta
+    - crear el archivo ".babelrc"
+    - Colocacion del siguiente codigo:
+    {
+        "preset": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+        ]
+    }
+
+>Instalacion de webpack
+npm install webpack webpack-cli html-webpack-plugin html-loader --save-dev
+
+>Creacion de archivo "webpack.config.js" & su configuración:
+    - crear archivo en raíz con nombre "webpack.config.js"
+    codigo de configuración:
+    // modulos
+    const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+    module.exports = { 
+        entry: './src/index.js', // entrada
+        output: { // donde se van a guardar los archivos resultantes
+            path: path.resolve(__dirname, 'dist'), // donde se va a guardar
+            filename: 'bundle.js' // nombre del archivo principal
+        },
+        resolve: { // manejo de extensiones
+            extensions: ['.js', '.jsx']
+        },
+        module: { // modulo de reglas del proyecto
+            rules: [
+                {
+                    test: /\.(js|jsx)$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: "babel-loader"
+                    }
+                },
+                {
+                    test: /\.html$/,
+                    use: [
+                        {
+                            loader: "html-loader"
+                        }
+                    ]
+                }
+            ]
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: './public/index.html',
+                filename: './index.html'
+            })
+        ]
+    };
