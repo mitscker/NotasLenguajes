@@ -67,3 +67,6 @@ npm install webpack webpack-cli html-webpack-plugin html-loader --save-dev
             })
         ]
     };
+
+>Configuracion de entorno en tiempo real por webpack
+npm install webpack-dev-server --save-dev
