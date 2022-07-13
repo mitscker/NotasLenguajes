@@ -112,3 +112,10 @@ lo que me salvo fue un unico commit que había hecho antes de este comando
     --allow-unrelated-histories
     quedando de la siguiente:
     git merge <nombre-de-la-rama> --allow-unrelated-histories
+
+
+>git branch -r
+comando para ver ramas remotas
+
+>git branch -a
+comando para ver ramas locales
